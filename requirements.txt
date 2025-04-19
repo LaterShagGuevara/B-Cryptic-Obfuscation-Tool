@@ -1,0 +1,6 @@
+pytest==7.4.3
+PyPDF2==3.0.1  # For PDF text handling
+reportlab==4.0.4  # For PDF text overlay
+typing-extensions==4.8.0  # For type hints
+pillow>=9.0.0  # Required by reportlab for image handling
+tk==0.1.0  # For GUI
