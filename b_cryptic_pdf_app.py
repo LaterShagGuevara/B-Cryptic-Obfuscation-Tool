@@ -269,8 +269,9 @@ class BCrypticPdfProcessor:
             
             # Replace page content with new page
             writer = PdfWriter()
-    for page in new_page.pages:
-        writer.add_page(page)
+            for page in new_page.pages:
+                writer.add_page(page) 
+            writer.add_page(page)
             
             # Save to a temporary buffer
             temp_buffer = io.BytesIO()
@@ -293,72 +294,73 @@ class BCrypticPdfProcessor:
             self.errors.append(error_msg)
             return False
             
-    def encode_pdf(self, input_path: str, output_path: str) -> bool:
-        """
-        Encode text in a PDF file using B-Cryptic encoding.
+        def encode_pdf(self, input_path: str, output_path: str) -> bool:
+            """
+            Encode text in a PDF file using B-Cryptic encoding.
+    
+            Args:
+                input_path: Path to input PDF
+                output_path: Path to output PDF
         
-        Args:
-            input_path: Path to input PDF
-            output_path: Path to output PDF
-            
-        Returns:
-            bool: True if successful
-        """
-        try:
-            # Clear previous errors
-            self.errors = []
-            
-            # Read input PDF
-            reader = PdfReader(input_path)
-            writer = PdfWriter()
-            
-            # Process each page
-            success = True
-            for page_num, page in enumerate(reader.pages):
-                try:
-                    self._log_debug(f"Processing page {page_num + 1}")
-                    
-                    # Extract and process text
-                    original_text = page.extract_text()
-                    if not original_text:
-                        raise ValueError("No text found in page")
-                        
-                    processed_text = self._process_text(original_text)
-                    if not processed_text:
-                        raise ValueError("Processing resulted in empty text")
-                        
-                    # Create new page with processed text
-                    new_page = self._create_text_page(processed_text)
-                    if not new_page or len(new_page.pages) == 0:
-                        raise ValueError("Failed to create new page")
-                        
-                    # Add the new page
-                for page in new_page.pages:
-                    writer.add_page(page)
-                    self._log_debug(f"Successfully processed page {page_num + 1}")
-                    
-                except Exception as e:
-                    error_msg = f"Error processing page {page_num + 1}: {str(e)}"
-                    self._log_debug(error_msg)
-                    self.errors.append(error_msg)
-                    success = False
-                    continue
-                    
-            # Save output PDF
-            with open(output_path, 'wb') as output_file:
-                writer.write(output_file)
+            Returns:
+                bool: True if successful
+            """
+            try:
+                # Clear previous errors
+                self.errors = []
+        
+                # Read input PDF
+                reader = PdfReader(input_path)
+                writer = PdfWriter()
+        
+                # Process each page
+                success = True
+                for page_num, page in enumerate(reader.pages):
+                    try:
+                        self._log_debug(f"Processing page {page_num + 1}")
                 
-            # Verify output
-            if not self._verify_output(input_path, output_path, encode=True):
-                raise ValueError("Output verification failed")
+                        # Extract and process text
+                        original_text = page.extract_text()
+                        if not original_text:
+                            raise ValueError("No text found in page")
+                    
+                        processed_text = self._process_text(original_text)
+                        if not processed_text:
+                            raise ValueError("Processing resulted in empty text")
+                    
+                        # Create new page with processed text
+                        new_page = self._create_text_page(processed_text)
+                        if not new_page or len(new_page.pages) == 0:
+                            raise ValueError("Failed to create new page")
+                    
+                        # Add all pages from the new generated PDF
+                        for np in new_page.pages:
+                            writer.add_page(np)
+                    
+                        self._log_debug(f"Successfully processed page {page_num + 1}")
                 
-            return success
+                    except Exception as e:
+                        error_msg = f"Error processing page {page_num + 1}: {str(e)}"
+                        self._log_debug(error_msg)
+                        self.errors.append(error_msg)
+                        success = False
+                        continue
+                
+                # Save output PDF
+                with open(output_path, 'wb') as output_file:
+                    writer.write(output_file)
             
-        except Exception as e:
-            error_msg = f"Failed to encode PDF: {str(e)}"
-            self._log_debug(error_msg)
-            self.errors.append(error_msg)
-            return False
+                # Verify output
+                if not self._verify_output(input_path, output_path, encode=True):
+                    raise ValueError("Output verification failed")
+            
+                return success
+        
+            except Exception as e:
+                error_msg = f"Failed to encode PDF: {str(e)}"
+                self._log_debug(error_msg)
+                self.errors.append(error_msg)
+                return False
             
     def decode_pdf(self, input_path: str, output_path: str) -> bool:
         """
