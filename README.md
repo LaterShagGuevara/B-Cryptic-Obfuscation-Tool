@@ -15,7 +15,7 @@
 
 **B-Cryptic** is a next-generation obfuscation system designed to render plaintext undetectable and uninterpretable—by humans, machines, and AI alike.
 
-Built on the novel **Practical Obfuscation Pad (POP)** concept, it leverages **3072 token definitions**, randomized substitution, prefix masking, and zero-repeat encoding to transform text into data that appears meaningless—yet is perfectly reversible by design (if and only if the full system context is known).
+Built on the novel **Practical Obfuscation Pad (POP)** concept, it leverages **3072 token definitions**, randomized substitution, and prefix masking to transform text into data that appears meaningless—yet is perfectly reversible by design (if and only if the full system context is known).
 
 It’s **not encryption**.  
 It’s stealth.
@@ -26,10 +26,9 @@ It’s stealth.
 
 - ✅ **100% reversible encoding/decoding** with full token accuracy
 - ✅ 95 ASCII characters + space supported (printable QWERTY)
-- ✅ **32 unique tokens per character** across 8 encoding tables
-- ✅ **Word-level obfuscation** for 750+ common English terms
+- ✅ **32 unique tokens per character** Monolithic Dictionary 
+- ✅ Update Soon **Word-level obfuscation** for 750+ common English terms
 - ✅ **Dynamic prefix rotation:** `+`, `*`, `^`, `[-` (confuses pattern matching)
-- ✅ Zero collisions: **no repeated token** appears in any message
 - ✅ Built-in **PDF batch encoding/decoding engine**
 - ✅ Sleek **Tkinter GUI** with:
   - Text and PDF tabs
