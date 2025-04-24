@@ -133,10 +133,10 @@ If you're a security researcher, privacy purist, red teamer, or creative mind �
 ###  • Credits & Contact
 
 **Author:** Samuel Bready  
-**Discord:** `LaterShagGuevara`  
+**Discord:** [LaterShagGuevara](friend_invitelink.js)  
 **Email:** [sam@breadystudios.com](mailto:sam@breadystudios.com)  
 **Website:** [B-Ready Studios](https://breadystudios.com)
-**Linkedin** [https://www.linkedin.com/in/samuel-bready-615bb5115/]
+**Linkedin** [Linkedin Profile](https://www.linkedin.com/in/samuel-bready-615bb5115/)
 
 ###  • License
 
