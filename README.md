@@ -45,7 +45,7 @@ It hides that you ever said anything at all.
   
 ---
 
-## • GUI Preview
+### • GUI Preview
 
 b_cryptic_ui.py interface includes:
 
@@ -61,7 +61,7 @@ b_cryptic_ui.py interface includes:
 
 ---
 
-## • Use Cases
+### • Use Cases
 
 - Secure but deniable communication
 - Offensive security & red team payloads
@@ -73,13 +73,13 @@ b_cryptic_ui.py interface includes:
 
 ---
 
-## • How It Works
+### • How It Works
 
     Every character (a–z, A–Z, 0–9, punctuation, and space) has 32 unique 25-character tokens
 
     Prefixes (+, *, ^, [-) rotate dynamically to confuse pattern detection
 
-    Tokens are randomly selected with zero repetition, generating output that:
+    Tokens are randomly selected with low repetition, generating output that:
       • Looks like nonsense
       • Evades brute-force attacks
       • Can only be reversed with full system definitions
@@ -88,13 +88,13 @@ Even if intercepted, the obfuscated message is unreadable without all original t
 
 ---
 
-##  • Project Structure
+###  • Project Structure
 B-Cryptic/ ├── b_cryptic_core.py # Main encoder/decoder logic ├── b_cryptic_pdf_app.py # PDF handler module ├── b_cryptic_ui.py # Full-featured Tkinter GUI ├── Final_Encoding_Table__*.csv # 8 encoding tables (32×96 per file) ├── requirements.txt ├── version_info.txt ├── README.md
 
 
 ---
 
-##  • Example: Obfuscated Message
+###  • Example: Obfuscated Message
 
 > **Plaintext:**  
 > `The deal is off. Burn everything.`
@@ -107,22 +107,7 @@ B-Cryptic/ ├── b_cryptic_core.py # Main encoder/decoder logic ├── b_
 
 ---
 
-##  • How It Works
-
-    Every character (a–z, A–Z, 0–9, punctuation, and space) has 32 unique 25-character tokens
-
-    Prefixes (+, *, ^, [-) rotate dynamically to confuse pattern detection
-
-    Tokens are randomly selected with zero repetition, generating output that:
-      • Looks like nonsense
-      • Evades brute-force attacks
-      • Can only be reversed with full system definitions
-
-Even if intercepted, the obfuscated message is unreadable without all original tables, prefix logic, and system settings.
-
----
-
-##  • Getting Started
+###  • Getting Started
 
  • Install Dependencies:
 
