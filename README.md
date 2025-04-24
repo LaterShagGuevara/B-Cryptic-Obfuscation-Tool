@@ -133,7 +133,7 @@ If you're a security researcher, privacy purist, red teamer, or creative mind �
 ###  • Credits & Contact
 
 **Author:** Samuel Bready  
-**Discord:** [LaterShagGuevara](friend_invitelink.js)  
+**Discord:** [LaterShagGuevara](https://discordapp.com/users/208452282105200640)  
 
 **Email:** [sam@breadystudios.com](mailto:sam@breadystudios.com)  
 
