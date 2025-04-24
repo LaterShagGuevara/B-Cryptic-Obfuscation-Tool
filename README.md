@@ -24,15 +24,25 @@ It hides that you ever said anything at all.
  • Key Features
 
   • 100% reversible encoding/decoding with full token accuracy
+  
   • 95 ASCII characters + space supported (printable QWERTY)
+  
   • 32 unique tokens per character using a Monolithic Dictionary
+  
   • Coming Soon: Word-level obfuscation for 750+ common English terms
+  
   • Dynamic prefix rotation: +, *, ^, [- (breaks pattern detection)
+  
   • Built-in PDF batch encoding/decoding engine
+  
   • Sleek Tkinter GUI with:
+  
   • Text and PDF tabs
+  
   • Dark mode toggle
+  
   • Console-style logs and error handling
+  
 ---
 
 ## • GUI Preview
