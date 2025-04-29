@@ -12,7 +12,7 @@ class BCrypticApplication(tk.Tk):
     def __init__(self):
         super().__init__()
         
-        self.title(" B-Cryptic™ Encoder   0.2.5.52a")
+        self.title(" B-Cryptic™ Obsfuscation Tool   0.2.8.52a")
         self.geometry("1200x850")
         
         self.pdf_processor = BCrypticPdfProcessor()
@@ -109,7 +109,7 @@ class BCrypticApplication(tk.Tk):
             self,
             text="Dark Mode",
             bg="black",
-            fg="white",
+            fg="grey",
             command=self.toggle_dark_mode,
             font=("Arial", 10, "bold")
         )
