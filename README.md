@@ -1,56 +1,75 @@
-# 🔐 B-Cryptic Encoder (BCE) – Practical Obfuscation Pad (POP)
+##  B-Cryptic Obfuscation Tool – Practical Obfuscation Pad (POP)
 
-**Author:** Samuel Bready  
-**Company:** B-Ready Studios LLC  
-**Version:** `v0.2.5.52a`  
-**License:** MIT  
-**Status:** Production-Ready
+ • Author: Samuel Bready
+ 
+ • Company: B-Ready Studios LLC
+ 
+ • Version: v0.2.5.52a
+ 
+ • License: MIT
+ 
+ • Status: Production-Ready
 
-> “Encryption hides secrets.  
-> **B-Cryptic hides the fact a message even exists.**”
-
----
-
-## 🧠 What Is B-Cryptic?
-
-**B-Cryptic** is a next-generation obfuscation system designed to render plaintext undetectable and uninterpretable—by humans, machines, and AI alike.
-
-Built on the novel **Practical Obfuscation Pad (POP)** concept, it leverages **3072 token definitions**, randomized substitution, prefix masking, and zero-repeat encoding to transform text into data that appears meaningless—yet is perfectly reversible by design (if and only if the full system context is known).
-
-It’s **not encryption**.  
-It’s stealth.
+    “Encryption hides secrets.
+    B-Cryptic hides the fact a message even exists.”
 
 ---
 
-## 🔧 Key Features
+What Is B-Cryptic?
 
-- ✅ **100% reversible encoding/decoding** with full token accuracy
-- ✅ 95 ASCII characters + space supported (printable QWERTY)
-- ✅ **32 unique tokens per character** across 8 encoding tables
-- ✅ **Word-level obfuscation** for 750+ common English terms
-- ✅ **Dynamic prefix rotation:** `+`, `*`, `^`, `[-` (confuses pattern matching)
-- ✅ Zero collisions: **no repeated token** appears in any message
-- ✅ Built-in **PDF batch encoding/decoding engine**
-- ✅ Sleek **Tkinter GUI** with:
-  - Text and PDF tabs
-  - Dark mode toggle
-  - Console-style logs and error handling
+B-Cryptic is a next-generation obfuscation tool that makes plaintext invisible to humans, machines, and AI.
+
+It’s built on the Practical Obfuscation Pad (POP) concept — not encryption, but a stealth mechanism. By using 3072 unique tokens, prefix rotation, and statistical noise generation, B-Cryptic transforms your message into gibberish that’s completely reversible only if the full context is known.
+
+It doesn’t hide what you say.
+It hides that you ever said anything at all.
 
 ---
 
-## 🖥️ GUI Preview
 
-The `b_cryptic_ui.py` interface offers:
+##  • Key Features
 
-- ✨ Encode/decode tab for plaintext
-- 📄 PDF encoding & decoding tab (batch-compatible)
-- 🌘 Dark mode with toggle button
-- 🧾 Status/output window
-- 💡 One-click file selection and action execution
+  • 100% reversible encoding/decoding with full token accuracy
+  
+  • 95 ASCII characters + space supported (printable QWERTY)
+  
+  • 32 unique tokens per character using a Monolithic Dictionary
+  
+  • Coming Soon: Word-level obfuscation for 750+ common English terms
+  
+  • Dynamic prefix rotation: +, *, ^, [- (breaks pattern detection)
+  
+  • Built-in PDF batch encoding/decoding engine
+  
+  • Sleek Tkinter GUI with:
+  
+  • Text and PDF tabs
+  
+  • Dark mode toggle
+  
+  • Console-style logs and error handling
+  
+---
+
+
+##  • GUI Preview
+
+b_cryptic_ui.py interface includes:
+
+    - Encode/decode tab for plaintext
+
+    - PDF encoding/decoding tab with batch support
+
+    - One-click dark mode toggle
+
+    - Output log window
+
+    - Easy file selection + action buttons
 
 ---
 
-## 🎯 Use Cases
+
+##  • Use Cases
 
 - Secure but deniable communication
 - Offensive security & red team payloads
@@ -62,88 +81,82 @@ The `b_cryptic_ui.py` interface offers:
 
 ---
 
-## 🔐 How It Works
 
-1. Each character (`a–z`, `A–Z`, `0–9`, punctuation, space) has **32 distinct 25-character tokens**.
-2. One or more of 8 randomized **token tables** are used per message.
-3. **Prefixes** like `+`, `^`, `*`, and `[-` are rotated to obfuscate structure.
-4. Tokens are sampled with zero repetition and stitched together—creating data that’s:
-   - **Statistically meaningless**
-   - **Impossible to brute-force**
-   - **Only decodable with exact system definitions**
+##  • How It Works
 
-> Even with the full encoded string, you *cannot* reverse the message without access to all active tables and system logic.
+    Every character (a–z, A–Z, 0–9, punctuation, and space) has 32 unique 25-character tokens
+
+    Prefixes (+, *, ^, [-) rotate dynamically to confuse pattern detection
+
+    Tokens are randomly selected with low repetition, generating output that:
+      • Looks like nonsense
+      • Evades brute-force attacks
+      • Can only be reversed with full system definitions
+
+Even if intercepted, the obfuscated message is unreadable without all original tables, prefix logic, and system settings.
 
 ---
 
-## 📁 Project Structure
+
+##  • Project Structure
 B-Cryptic/ ├── b_cryptic_core.py # Main encoder/decoder logic ├── b_cryptic_pdf_app.py # PDF handler module ├── b_cryptic_ui.py # Full-featured Tkinter GUI ├── Final_Encoding_Table__*.csv # 8 encoding tables (32×96 per file) ├── requirements.txt ├── version_info.txt ├── README.md
 
 
 ---
 
-## 🧪 Example: Obfuscated Message
+
+##  • Example: Obfuscated Message
 
 > **Plaintext:**  
 > `The deal is off. Burn everything.`
 
-> **B-Cryptic Output (1 of infinite variations):**  
+> **B-Cryptic Output (Example):**  
 > `[+xtl2woT56a7054OBQJ65w840][+K6A3q7O66C48E94A4c03kVcP][+DX9fH5d21M891ik5958zLlo4]...[+xj24qi1lV5FC165o6aVc5118]`
-
-> - No token appears twice  
+  
 > - No decoder can reverse this without full system knowledge  
 > - AI/NLP sees this as statistical noise
 
 ---
 
-## 🔐 How It Works
 
-1. **Each character** (a–z, A–Z, 0–9, punctuation, space) has 32 unique tokens.
-2. **Table mix level** determines how many of the 8 tables are used.
-3. **Prefixes** (`+`, `*`, `^`, `[`) are rotated randomly to confuse pattern detection.
-4. **Message is reconstructed** using selected tokens, producing noise that resembles data gibberish, not communication.
+##  • Getting Started
 
-To decode:
-- You must have the correct 8 tables,
-- Use the same mixing logic and prefix map,
-- And match each token **exactly**.
+ • Install Dependencies:
 
----
+ • pip install -r requirements.txt
 
-## 🚀 Getting Started
+ • Launch GUI:
 
-### 🔧 Install dependencies
-```bash
-pip install -r requirements.txt
-
-### Launch GUI
-
-python b_cryptic_ui.py
+ • python b_cryptic_ui.py
 
 
-### Philosophy
+##  • Philosophy
 
-B-Cryptic is not encryption.
-It's stealth-by-design — a tool for those who want to communicate in plain sight with a zero-detection footprint.
+B-Cryptic isn’t encryption.
+It’s stealth-by-design.
 
-Whether you’re a security researcher, privacy advocate, red teamer, puzzle builder, or just paranoid:
+If you're a security researcher, privacy purist, red teamer, or creative mind — B-Cryptic gives you the power to vanish in plain sight.
 
-    B-Cryptic gives you the power to hide everything, including the fact you were hiding at all.
 
-### Credits & Contact
+##  • Credits & Contact
 
 **Author:** Samuel Bready  
-**Discord:** `LaterShagGuevara`  
+**Discord:** [LaterShagGuevara](https://discordapp.com/users/208452282105200640)  
+
 **Email:** [sam@breadystudios.com](mailto:sam@breadystudios.com)  
+
 **Website:** [B-Ready Studios](https://breadystudios.com)
 
-### License
+**Linkedin** [Linkedin Profile](https://www.linkedin.com/in/samuel-bready-615bb5115/)
+
+
+##  • License
 
 B-Cryptic is developed by B-Ready Studios LLC. 
 This project is licensed under the MIT License. Use it for good — or at least, for interesting.
 
-### Final Words
+
+##  • Final Words
 
     “Encryption hides secrets.
     B-Cryptic hides the fact that a secret ever existed.”
-    — You, the Cipher Architect
