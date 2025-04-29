@@ -1,0 +1,14 @@
+B-Cryptic Secure Encoding System
+Copyright (c) 2025 B-Ready Studios LLC
+
+By installing this software, you agree to the following:
+
+1. You will not reverse engineer, decompile, or disassemble the B-Cryptic encoder or decoder.
+2. You acknowledge that this system is experimental and may contain sensitive or classified content.
+3. Redistribution of this tool, in whole or in part, without explicit permission is prohibited.
+4. Use of this system for unlawful or unethical purposes is strictly forbidden.
+5. B-Ready Studios LLC is not liable for any data loss, misuse, or unintended consequences arising from this tool.
+
+By clicking "Next", you confirm your acceptance of this agreement.
+
+Authorized Users Only – Surveillance may be active.
