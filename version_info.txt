@@ -20,12 +20,12 @@ VSVersionInfo(
           [
             StringStruct('CompanyName', 'B-Ready Studios LLC'),
             StringStruct('FileDescription', 'B-Cryptic: Obfuscation Tool'),
-            StringStruct('FileVersion', '0.2.8.52a'),
+            StringStruct('FileVersion', '0.3.8.5a'),
             StringStruct('InternalName', 'B-Cryptic'),
-            StringStruct('LegalCopyright', '©2025 B-Ready Studios LLC'),
+            StringStruct('LegalCopyright', 'Â©2025 B-Ready Studios LLC'),
             StringStruct('OriginalFilename', 'b_cryptic_ui.exe'),
-            StringStruct('ProductName', 'B-Cryptic: Obfuscation Tool (BC:OT)'),
-            StringStruct('ProductVersion', '0.2.8.52a'),
+            StringStruct('ProductName', 'B-Cryptic: Obfuscation Tool '),
+            StringStruct('ProductVersion', '0.3.8.5a'),
           ]
         )
       ]
