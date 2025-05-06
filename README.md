@@ -1,6 +1,6 @@
-##  B-Cryptic Obfuscation Tool – Practical Obfuscation Pad (POP)
+##  B-Cryptic Obfuscation Tool - aka - Practical Obfuscation Pad (POP)
 
- • Author: Samuel Bready
+ • Author: Samuel (Shaggy) Bready
  
  • Company: B-Ready Studios LLC
  
